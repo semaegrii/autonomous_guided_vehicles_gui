@@ -1,0 +1,1 @@
+{'en_son_basilan_form_adi': 'ORNEK_ETIKET_output.docx', 'yapilan_tartim_sayisi': 96, 'son_barkod_basilma_durumu': True, 'mevcut_kullanici': 'OPTIMAK_AGV', 'kayitli_gun': 1}
