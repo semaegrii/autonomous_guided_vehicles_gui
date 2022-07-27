@@ -118,11 +118,11 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             self.timer.timeout.connect(self.Haritaguncelle)
             if not self.timer.isActive():
                 self.timer.start(100)
-            self.image=opencv2.imread('/home/user/Desktop/unmanned_guided_vehicles_gui/endustriyel_harita_yok.jpg')
+            self.image=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/endustriyel_harita_yok.jpg')
             self.harita=self.image
-            self.harita_1=opencv2.imread('/home/user/Desktop/unmanned_guided_vehicles_gui/{}'.format(self.harita_1_name))
-            self.harita_2=opencv2.imread('/home/user/Desktop/unmanned_guided_vehicles_gui/{}'.format(self.harita_2_name))
-            self.pacman=opencv2.imread('/home/user/Desktop/unmanned_guided_vehicles_gui/{}'.format(self.agv_icon_name))
+            self.harita_1=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.harita_1_name))
+            self.harita_2=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.harita_2_name))
+            self.pacman=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.agv_icon_name))
             self.pacman=opencv2.cvtColor(self.pacman,opencv2.COLOR_BGR2RGB)
 
             self.agv_ikon_gorunme_durumu=False
