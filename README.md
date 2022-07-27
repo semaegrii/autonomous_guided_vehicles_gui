@@ -1,5 +1,5 @@
 
-## *OTONOM TAKİP ARAÇLARI İÇİN MANUEL VE OTONOM KONTROL ARAYÜZÜ*
+## *AGV' LER İÇİN MANUEL VE OTONOM KONTROL ARAYÜZÜ*
 
 **Geliştirme ve Deneme**: Sema EĞRİ💻 ve Ramazan GÜL💻
 
