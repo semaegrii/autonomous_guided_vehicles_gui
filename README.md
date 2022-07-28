@@ -3,7 +3,7 @@
 
 **Geliştirme ve Deneme**: Sema EĞRİ💻 ve Ramazan GÜL💻
 
-🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙
+🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙
 
 | ANASAYFA SEKMESI 🏡|KONTROL SEKMESI 🚗 | DURAK TAKİP SEKMESI 🕹 | AYARLAR SEKMESI 🛠️|
 | ------ | ------ | ------ | ------ |
