@@ -96,11 +96,14 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.harita_1_name = self.portlar_dict["HARITA_1_NAME"]
                 self.harita_2_name = self.portlar_dict["HARITA_2_NAME"]
                 self.agv_icon_name = self.portlar_dict["AGV_ICON_NAME"]
+                self.agv2_icon_name = self.portlar_dict["AGV2_ICON_NAME"]
+
                 self.istasyon_kayit_dosyasi = self.portlar_dict["ISTASYON_KAYIT_DOSYASI"]
 
                 self.anapencere.lineEditAyarlarHarita1.setText(str(self.harita_1_name))
                 self.anapencere.lineEditAyarlarHarita2.setText(str(self.harita_2_name))
                 self.anapencere.lineEditAyarlarAGVicon.setText(str(self.agv_icon_name))
+                self.anapencere.lineEditAyarlarAGV2icon.setText(str(self.agv2_icon_name))
                 self.anapencere.lineEditAyarlarDurakKayitDosyasi.setText(str(self.istasyon_kayit_dosyasi))
 
             except Exception as e:
@@ -123,12 +126,13 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             self.harita_1=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.harita_1_name))
             self.harita_2=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.harita_2_name))
             self.pacman=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.agv_icon_name))
-            self.pacman=opencv2.cvtColor(self.pacman,opencv2.COLOR_BGR2RGB)
+            self.pacman_1=opencv2.imread('/home/user/Desktop/autonomous_guided_vehicles_gui/{}'.format(self.agv2_icon_name))
+
 
             self.agv_ikon_gorunme_durumu=False
             self.agv_ikon_gorunme_durumu_1=False    
 
-            self.pacman_1=opencv2.imread('AGV.png')
+            self.pacman=opencv2.cvtColor(self.pacman,opencv2.COLOR_BGR2RGB)
             self.pacman_1=opencv2.cvtColor(self.pacman_1,opencv2.COLOR_BGR2RGB)
             self.durak_kayit_dizini='datalar/{}'.format(self.istasyon_kayit_dosyasi)
             self.hiz_mesaji_1=Twist()
@@ -475,8 +479,8 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             self.durak_kaydet_mesaj=mesaj
 
             if self.anapencere.comboBox_amr_secim.currentIndex()==0:
-                self.anapencere.label_durak_kaydet_mevcut_konum.setText("SECILI AGV YOK")
-                self.anapencere.label_durak_kaydet_mevcut_konum_2.setText("SECILI AGV YOK")
+                self.anapencere.label_durak_kaydet_mevcut_konum.setText("SELECTED AGV DOESNT EXIST")
+                self.anapencere.label_durak_kaydet_mevcut_konum_2.setText("SELECTED AGV DOESNT EXIST")
                 
             if self.anapencere.comboBox_amr_secim.currentIndex()==1:
                 self.konum_veri_temizle()
@@ -531,9 +535,9 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             if self.mevcut_konum_yaz:            
                 self.anapencere.label_durak_kaydet_mevcut_konum_2.setText("x:{:.4f}, y:{:.4f}, z:{:.4f}".format(self.durak_kaydet_mesaj.pose.pose.position.x,
                                                                                                     self.durak_kaydet_mesaj.pose.pose.position.y,
-                                                                                                    self.durak_kaydet_mesaj.pose.pose.position.z))
-            else:
-                self.anapencere.label_durak_kaydet_mevcut_konum_2.setText("SECILI AGV YOK")
+                                                                                                     self.durak_kaydet_mesaj.pose.pose.position.z))
+            # else:
+            #     self.anapencere.label_durak_kaydet_mevcut_konum_2.setText("SELECTED AGV DOESNT EXIST")
                                                                                                     
             self.konum_x_2=round(mesaj.pose.pose.position.x/0.05)
             self.konum_y_2=round(mesaj.pose.pose.position.y/0.05)
@@ -843,7 +847,7 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
                         if station == i:
                             kontrol = True
                     if kontrol:
-                        self.anapencere.label_durak_log.setText("\nAMR1 DURAK ZATEN MEVCUT\n")
+                        self.anapencere.label_durak_log.setText("\nAGV1 STATION ALREADY AVAIABLE \n")
                         self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
@@ -857,16 +861,16 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
 
                         save_dict_to_file(durak_dict_list, self.durak_kayit_dizini)        
 
-                        self.anapencere.label_durak_log.setText("\nAMR1 DURAK KAYDEDİLDİ\n")
+                        self.anapencere.label_durak_log.setText("\nAGV1 STATION SAVED\n")
                         self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_yesil)
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
                         self.durak_listesi_yenile()
                 else:
-                    self.anapencere.label_durak_log.setText("\nAMR1 DURAK İSMİ GİRİNİZ\n")
+                    self.anapencere.label_durak_log.setText("\nAGV1 WRITE STATION NAME \n")
                     self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
                     self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet(self.stylesheet_kirmizi)              
-
+                    QtCore.QTimer.singleShot(2000, lambda: self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet("background-color:none; border:none;"))
 
             if self.anapencere.tabWidget.currentIndex()==2 or self.anapencere.comboBox_amr_secim.currentIndex()==2:
 
@@ -882,7 +886,7 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
                         if station == i:
                             kontrol = True
                     if kontrol:
-                        self.anapencere.label_durak_log.setText("\nAMR2 DURAK ZATEN MEVCUT\n")
+                        self.anapencere.label_durak_log.setText("\nAGV2 STATION ALREADY AVAIABLE \n")
                         self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
@@ -896,55 +900,18 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
 
                         save_dict_to_file(durak_dict_list, self.durak_kayit_dizini)        
 
-                        self.anapencere.label_durak_log.setText("\nAMR2 DURAK KAYDEDİLDİ\n")
+                        self.anapencere.label_durak_log.setText("\nAGV2 STATION SAVED \n")
                         self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_yesil)
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
                         QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
                         self.durak_listesi_yenile()
                 else:
-                    self.anapencere.label_durak_log.setText("\nAMR2 DURAK İSMİ GİRİNİZ\n")
+                    self.anapencere.label_durak_log.setText("\nAGV2 WRITE STATION NAME \n")
                     self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
                     self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet(self.stylesheet_kirmizi) 
-
-
-            if self.anapencere.tabWidget.currentIndex()==3 or self.anapencere.comboBox_amr_secim.currentIndex()==3:  
-                station=self.anapencere.lineEdit_durak_kaydet_durak_ismi.text()
-                durak_notu=self.anapencere.lineEdit_durak_kaydet_durak_notu.text()
-                if len(durak_notu)==0: durak_notu=" "
-                if len(station)>0:
-
-                    self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet(self.stylesheet_yesil)
                     QtCore.QTimer.singleShot(2000, lambda: self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet("background-color:none; border:none;"))
-                    durak_dict_list = load_dict_from_file8bit(self.durak_kayit_dizini)           
-                    for i in durak_dict_list:
-                        if station == i:
-                            kontrol = True
-                        
-                    if kontrol:
-                        self.anapencere.label_durak_log.setText("\nAMR3 DURAK ZATEN MEVCUT\n")                        
-                        self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
-                        QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
-                        QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
-                    else:
-                        durak_dict_list = load_dict_from_file8bit(self.durak_kayit_dizini)
-                        durak_dict_list.update({"{}".format(station): {'x':self.durak_kaydet_mesaj.pose.pose.position.x,
-                                                                            'y':self.durak_kaydet_mesaj.pose.pose.position.y,
-                                                                            'z':self.durak_kaydet_mesaj.pose.pose.position.z,
-                                                                            'not':durak_notu}})
 
-
-                        save_dict_to_file(durak_dict_list, self.durak_kayit_dizini)        
-
-                        self.anapencere.label_durak_log.setText("\nAMR3 DURAK KAYDEDİLDİ\n")
-                        self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_yesil)
-                        QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setText(""))                       
-                        QtCore.QTimer.singleShot(2000, lambda: self.anapencere.label_durak_log.setStyleSheet("background-color:none; border:none;"))
-                        self.durak_listesi_yenile()
-                else:
-                    self.anapencere.label_durak_log.setText("\nAMR3 DURAK İSMİ GİRİNİZ\n")
-                    self.anapencere.label_durak_log.setStyleSheet(self.stylesheet_sari)
-                    self.anapencere.lineEdit_durak_kaydet_durak_ismi.setStyleSheet(self.stylesheet_kirmizi)
-
+            
         except Exception as e:
 
             self.anapencere.label_durak_log.setText(str(e))
@@ -1008,11 +975,11 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             if  kontrol:
                 del durak_dict_list["{}".format(station)]
                 save_dict_to_file(durak_dict_list, self.durak_kayit_dizini)
-                self.anapencere.label_durak_log.setText("{} İSİMLİ DURAK SİLİNDİ".format(station))
+                self.anapencere.label_durak_log.setText("{} NAMED STATION REMOVED ".format(station))
                 self.durak_listesi_yenile()                
 
             else:
-                self.anapencere.label_durak_log.setText("\nDURAK BULUNAMADI\n")                
+                self.anapencere.label_durak_log.setText("\THE STATION DOES NOT AVAIABLE.\n")                
         except Exception as e:
             self.anapencere.label_durak_log.setText(str(e))            
             self.log_yaz("STATION DELETE ERROR",str(e))
@@ -1025,6 +992,7 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             harita_1_name = self.anapencere.lineEditAyarlarHarita1.text()
             harita_2_name = self.anapencere.lineEditAyarlarHarita2.text()
             agv_icon_name = self.anapencere.lineEditAyarlarAGVicon.text()
+            agv2_icon_name = self.anapencere.lineEditAyarlarAGV2icon.text()
             istasyon_kayit_dosyasi = self.anapencere.lineEditAyarlarDurakKayitDosyasi.text()
 
             portlar_dict = load_dict_from_file8bit(self.portlar_dosyasi)
@@ -1032,6 +1000,7 @@ class AnaPencere(QtWidgets.QMainWindow, Ui_MainWindow):
             portlar_dict["HARITA_1_NAME"] = harita_1_name
             portlar_dict["HARITA_2_NAME"] = harita_2_name
             portlar_dict["AGV_ICON_NAME"] = agv_icon_name
+            portlar_dict["AGV2_ICON_NAME"] = agv2_icon_name
             portlar_dict["ISTASYON_KAYIT_DOSYASI"] = istasyon_kayit_dosyasi
 
             save_dict_to_file(portlar_dict, self.portlar_dosyasi)

@@ -2024,7 +2024,7 @@ QPushButton::hover
                <number>-3</number>
               </property>
               <property name="text">
-               <string>Hata yok</string>
+               <string>No error</string>
               </property>
               <property name="textFormat">
                <enum>Qt::AutoText</enum>
@@ -2131,10 +2131,10 @@ border-color: rgb(0, 0, 0);
 border-radius: 10px;</string>
                  </property>
                  <property name="currentText">
-                  <string>SELECT AGV</string>
+                  <string>AGV 2</string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>2</number>
                  </property>
                  <item>
                   <property name="text">
@@ -2853,7 +2853,7 @@ background-color: rgb(0, 120, 10);
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_15">
-                 <item row="8" column="1" colspan="2">
+                 <item row="9" column="1" colspan="2">
                   <layout class="QHBoxLayout" name="horizontalLayout_7">
                    <item>
                     <widget class="QLabel" name="labelRosAyarlariLog">
@@ -2935,7 +2935,7 @@ QPushButton::hover
                    </item>
                   </layout>
                  </item>
-                 <item row="7" column="2">
+                 <item row="8" column="2">
                   <spacer name="verticalSpacer_12">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
@@ -3067,7 +3067,7 @@ QPushButton::hover
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="2">
+                 <item row="6" column="2">
                   <widget class="QLineEdit" name="lineEditAyarlarDurakKayitDosyasi">
                    <property name="minimumSize">
                     <size>
@@ -3122,7 +3122,7 @@ QPushButton::hover
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="1">
+                 <item row="6" column="1">
                   <widget class="QLabel" name="label_33">
                    <property name="minimumSize">
                     <size>
@@ -3183,6 +3183,38 @@ QPushButton::hover
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QLabel" name="label">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">	border: none;
+	border-radius: none;</string>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <property name="text">
+                    <string>              AGV 2 ICON:  </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="2">
+                  <widget class="QLineEdit" name="lineEditAyarlarAGV2icon">
+                   <property name="styleSheet">
+                    <string notr="true">	border: 3px solid;
+	border-radius: 10px;</string>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -3389,8 +3421,8 @@ background-color: rgb(230, 230, 230);
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>292</width>
-                <height>156</height>
+                <width>350</width>
+                <height>322</height>
                </rect>
               </property>
               <attribute name="icon">
