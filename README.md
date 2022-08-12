@@ -1,9 +1,8 @@
 
 ## *MANUAL AND AUTONOMOUS CONTROL INTERFACE FOR AGVs*
 
-**Geliştirme ve Deneme**: Sema EĞRİ💻 ve Ramazan GÜL💻
+**Developers**: Sema EĞRİ💻 and Ramazan GÜL💻
 
-🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙
 
 | HOME PAGE 🏡| ROBOT CONTROL 🚗 | VEHICLE STATION TRACKING 🕹 | SETTINGS 🛠️|
 | ------ | ------ | ------ | ------ |
