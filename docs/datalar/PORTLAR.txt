@@ -1,0 +1,6 @@
+{'HARITA_1_NAME': 'agv_harita.png', 
+'HARITA_2_NAME': 'agv_harita.png', 
+'AGV_ICON_NAME': 'AGV.png', 
+'AGV2_ICON_NAME': 'AGV_2.png', 
+'ISTASYON_KAYIT_DOSYASI': 'stations_3.json'}
+
