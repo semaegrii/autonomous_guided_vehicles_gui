@@ -1,51 +1,47 @@
 
-## *AGV' LER İÇİN MANUEL VE OTONOM KONTROL ARAYÜZÜ*
+## *MANUAL AND AUTONOMOUS CONTROL INTERFACE FOR AGVs*
 
-**Geliştirme ve Deneme**: Sema EĞRİ💻 ve Ramazan GÜL💻
+**Developers**: Sema EĞRİ💻 and Ramazan GÜL💻
 
-🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙
 
-| ANASAYFA SEKMESI 🏡|KONTROL SEKMESI 🚗 | DURAK TAKİP SEKMESI 🕹 | AYARLAR SEKMESI 🛠️|
+| HOME PAGE 🏡| ROBOT CONTROL 🚗 | VEHICLE STATION TRACKING 🕹 | SETTINGS 🛠️|
 | ------ | ------ | ------ | ------ |
-| ARAÇLARIN AKTİFLİK DURUMLARI | ARAÇLARIN İKON OLARAK GÖRSELLEŞTİRİLDİĞİ KISIM | DURAK İSMİ VE KONUMU KAYDETME | PLC HABERLEŞME |
-| KAPATMA VE YENİLEME BUTONU | TEKİL VE SÜRÜ OTONOM OKLA HEDEF VERME |DURAKLARA NOT EKLEME | OPERATÖR EKLEME ÇIKARMA |
-| LOGLARIN YAZILMASI İLE HATA KONTROLÜ |TEKİL VE SÜRÜ BUTON İLE MANUEL KONTROL | DURAK EKLEME VE ÇIKARMA | ROS AYARLARI |
-| ARAYÜZ BAĞLANTI DURUMU KONTROLÜ | ARAÇ KONUM,HIZ,DÖNÜŞ AÇISI BİLGİSİ YAYINLAMA | İSTENEN DURAĞI SEÇEBİLME | ÖZEL KULLANICI GİRİŞİ |
+| ACTIVITY STATUS OF VEHICLES | THE SECTION WHERE VEHICLES ARE VISUALIZED AS ICONS | SAVING STOP NAME AND LOCATION | PLC COMMUNICATION |
+| CLOSE AND RENEW BUTTON | SINGLE AND MULTI VEHICLE AUTONOMOUS TARGETING |ADDING NOTES TO STATIONS | ADD OPERATOR REMOVE |
+|ERROR CHECK |SINGLE AND MULTI VEHICLE MANUEL CONTROL| STATION ADD AND REMOVE | ROS SETTINGS |
+| INTERFACE CONNECTION STATUS CHECK | VEHICLE'S POSITION, SPEED, ANGLE OF TURN INFORMATION | SELECTING THE REQUESTED STATION | SPECIAL USER LOGIN |
 |![anasayfa](https://user-images.githubusercontent.com/78825912/181281807-03768be9-78e6-454f-9cde-c994948567b8.jpeg) |![kontrol](https://user-images.githubusercontent.com/78825912/181281869-7b35bec2-a4eb-48ca-a7be-6565c2fa479f.jpeg) |![durak](https://user-images.githubusercontent.com/78825912/181282110-6e306728-110e-4e83-879b-f6d73bb2ddcd.jpeg) |![ayarlar](https://user-images.githubusercontent.com/78825912/181282194-e51ff406-4edb-4c2c-abe8-eecab5ccd654.jpeg) |
 |![kontrol](https://user-images.githubusercontent.com/78825912/181281963-e16c2754-c279-4547-824f-cfea19da9c86.jpeg) |![durak](https://user-images.githubusercontent.com/78825912/181282154-8a8f71a9-ae4f-414f-be0d-67771b1e5120.jpeg) |![kontrol](https://user-images.githubusercontent.com/78825912/181282045-c086c4e9-21ed-435d-ac13-76cefaebc67f.jpeg) |![kontrol](https://user-images.githubusercontent.com/78825912/181281986-663518b1-f99f-4d40-aa6d-03a111d5e586.jpeg) |![durak](https://user-images.githubusercontent.com/78825912/181282132-854125b0-29c1-4651-8f3a-3d3979be3f63.jpeg) |![durak](https://user-images.githubusercontent.com/78825912/181282171-45509c4e-ec0b-4a07-8040-1eb037561a26.jpeg) |
 
-🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙🚙
 
 
 
-ROS ortamında geliştirdiğim otonom takip araçları (AGV) için tasarladığım kullanıcı arayüzünü paylaşmak istiyorum sizlerle.
+The interface consists of 4 main parts:
 
-Arayüz 4 ana bölümden oluşmakta:
+## 1. Home page
 
-## 1. Ana sayfa
+▪︎*In this section, robot-interface and plc-interface connection status of vehicles are checked*,
 
-▪︎*Bu bölümde, araçların robot-arayüz ve plc-arayüz bağlantı durumları kontrol edilmekte*,
+▪︎*If there is any problem in the code, the errors are displayed in the log section*.
 
-▪︎*Kodda herhangi bir sorun varsa hataları log kısmında görüntülenmektedir*.
+## 2. Robot Control
 
-## 2. Robot Kontrol
+▪︎*Manual controls of vehicles are provided independently and as a herd*,
 
-▪︎*Araçların birbirinden bağımsız ve sürü olarak manuel kontrolleri sağlanmakta*,
+▪︎*The angular and linear speed, position and rotation angle information obtained from the vehicle are displayed,*
 
-▪︎*Araçtan alınan açısal ve lineer hız, konum ve dönüş açısı bilgileri görüntülenmekte,*
+▪︎*Vehicles visualized with Opencv can be viewed from this section, wherever they are in the Gazebo simulation environment.*
 
-▪︎*Opencv ile görselleştirilen araçlar Gazebo simülasyon ortamında hangi konumdaysa bu bölümden izlenebilmektedir.*
+## 3. Vehicle Station Tracking
 
-## 3. Araç İstasyon Takibi
+▪︎*A section has been created where you can save the starting and destination locations of the vehicles by adding summary information next to them.*
 
-▪︎*Araçların başlangıç ve hedef konumlarını yanına özet bilgi ilave ederek kaydedebileceğiniz bir bölme oluşturulmuştur.*
+▪︎*Separate records are created for each vehicle and can be deleted when no longer needed.*
 
-▪︎*Her araç için ayrı ayrı kayıtlar oluşturulmakta ve gerek kalmadığında silinebilmektedir.*
+## 4. Settings
 
-## 4. Ayarlar
+▪︎*New operator registrations are made from this section.*
 
-▪︎*Yeni operatör kayıtları bu bölmeden yapılmaktadır.*
+▪︎*The records of the map and icons used for the visualization of the Gazebo simulation environment are kept in this section.*
 
-▪︎*Gazebo simülasyon ortamının görselleştirilmesi için kullanılan haritanın ve ikonların kayıtları bu bölümde tutulamaktadır.*
-
-▪︎*Bu bölme güvenlidir, işlem yapabilmek için önce kullanıcı girişi yapılmaktadır.*
+▪︎*This partition is secure, user login is required first to be able to operate.*
