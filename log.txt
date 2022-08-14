@@ -59,3 +59,62 @@
 14-08-2022-01.34.04: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 9 but corresponding boolean dimension is 33  
 14-08-2022-01.34.04: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
 14-08-2022-01.34.04: PROGRAM CLOSED ERROR -   
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.19: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.19: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.20: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.20: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PUT FOR CHANNEL IMAGE ERROR - boolean index did not match indexed array along dimension 0; dimension is 7 but corresponding boolean dimension is 20  
+14-08-2022-03.11.21: MAP VISUALIZE ERROR - 'NoneType' object is not iterable  
+14-08-2022-03.11.21: PROGRAM CLOSED ERROR -   
